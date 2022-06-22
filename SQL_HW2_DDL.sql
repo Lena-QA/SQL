@@ -161,11 +161,11 @@ create table roles_1 (
 id serial primary key,
 role_name int not null unique);
 
-8.Поменять тип столба role_name с int на varchar(30).
+--8.Поменять тип столба role_name с int на varchar(30).
 
 alter table roles_1 alter column role_name type varchar (30);
 
-9.Наполнить таблицу roles 20 строками.
+--9.Наполнить таблицу roles 20 строками.
 
 insert into roles_1 (role_name)
 values ('Junior Python developer'),
@@ -189,7 +189,7 @@ values ('Junior Python developer'),
 ('Middle Automation QA engineer'),
 ('Senior Automation QA engineer');
 
-10.Создать таблицу roles_employee.
+--10.Создать таблицу roles_employee.
 
 create table roles_employee (
 id serial primary key,
@@ -201,7 +201,7 @@ foreign key (role_id)
 references roles_1 (id)
 );
 
-11.Наполнить таблицу roles_employee 40 строками.
+--11.Наполнить таблицу roles_employee 40 строками.
 
 insert into roles_employee (employee_id, role_id)
 values (7, 2),
