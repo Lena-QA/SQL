@@ -124,7 +124,7 @@ select Count(id) from students;
 select id, name, created_on from students
 order by created_on asc;
 
-Вывести id пользователя, имя, дату создания пользователя. 
+32. Вывести id пользователя, имя, дату создания пользователя. 
 Отсортировать по порядку убывания даты добавления пользователя.
 
 select id, name, created_on from students 
