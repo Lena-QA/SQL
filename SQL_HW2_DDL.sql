@@ -1,10 +1,10 @@
-1. ������� ������� employees.
+--1. Создать таблицу employees.
 
 create table employees (
 id serial primary key,
 employee_name varchar (50) not null);
 
-2. ��������� ������� employee 70 ��������.
+--2. Наполнить таблицу employee 70 строками.
 
 insert into employees (employee_name) 
 values ('Sasha'),
@@ -78,13 +78,13 @@ values ('Sasha'),
 ('Mariyaaa'),
 ('Kseniyaaa');
 
-3. ??????? ??????? salary.
+--3. Создать таблицу salary.
 
 create table salary_1 (
 id serial primary key,
 monthly_salary int not null);
 
-4. ????????? ??????? salary 15 ????????.
+--4. Наполнить таблицу salary 15 строками.
 
 insert into salary_1 (monthly_salary)
 values (1000),
@@ -104,14 +104,14 @@ values (1000),
 (2400),
 (2500); 
 
-5. ??????? ??????? employee_salary.
+--5. Создать таблицу employee_salary
 
 create table employee_salary_1 (
 id serial primary key,
 employee_id int not null unique,
 salary_id int not null);
 
-6.????????? ??????? employee_salary 40 ????????. ? 10 ????? ?? 40 ???????? ?????????????? employee_id.
+--6.Наполнить таблицу employee_salary 40 строками. В 10 строк из 40 вставить несуществующие employee_id.
 
 insert into employee_salary_1 (employee_id, salary_id)
 values (3, 7),
@@ -155,17 +155,17 @@ values (3, 7),
 (78, 8),
 (82, 11); 
 
-7.??????? ??????? roles.
+--7.Создать таблицу roles.
 
 create table roles_1 (
 id serial primary key,
 role_name int not null unique);
 
-8.???????? ??? ?????? role_name ? int ?? varchar(30).
+8.Поменять тип столба role_name с int на varchar(30).
 
 alter table roles_1 alter column role_name type varchar (30);
 
-9.????????? ??????? roles 20 ????????.
+9.Наполнить таблицу roles 20 строками.
 
 insert into roles_1 (role_name)
 values ('Junior Python developer'),
@@ -189,7 +189,7 @@ values ('Junior Python developer'),
 ('Middle Automation QA engineer'),
 ('Senior Automation QA engineer');
 
-10.??????? ??????? roles_employee.
+10.Создать таблицу roles_employee.
 
 create table roles_employee (
 id serial primary key,
@@ -201,7 +201,7 @@ foreign key (role_id)
 references roles_1 (id)
 );
 
-11.????????? ??????? roles_employee 40 ????????.
+11.Наполнить таблицу roles_employee 40 строками.
 
 insert into roles_employee (employee_id, role_id)
 values (7, 2),
@@ -244,8 +244,3 @@ values (7, 2),
 (63, 19), 
 (57, 20), 
 (48, 17);
-
-
-
-
-
